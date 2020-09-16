@@ -6,7 +6,7 @@ terraform {
         organization = "elyk"
 
         workspaces {
-          name = "dainfra-dev"
+          prefix = "dainfra"
         }
     }
 }
