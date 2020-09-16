@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source  = "terraform-aws-modules/vpc"
+  source  = "terraform-aws-modules/vpc/aws"
 
   name            = var.project
   cidr            = var.cidr
