@@ -17,7 +17,6 @@ provider "aws" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc"
-  version = "2.51.0"
 
   name            = var.project
   cidr            = var.cidr
