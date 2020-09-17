@@ -8,7 +8,7 @@ azs = [
 env = {
   "dainfra-dev" : "dev",
   "dainfra-stg" : "stg",
-  "dainfra-prd" : "prd",
+  "dainfra-prd" : "prod",
 }
 cidr = "172.16.0.0/16"
 public_subnets = [
