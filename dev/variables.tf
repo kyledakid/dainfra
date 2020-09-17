@@ -12,7 +12,7 @@ variable "azs" {
 }
 
 variable "env" {
-  type = map
+  type = string
 }
 
 variable "project" {
