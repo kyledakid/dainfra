@@ -14,3 +14,14 @@ variable "azs" {
 variable "env" {
   type = map
 }
+
+variable "project" {
+  description = "Project Name"
+  type        = string
+}
+
+variable "cidr" {
+  description = "VPC CIDR"
+  type        = string
+}
+

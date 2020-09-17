@@ -18,11 +18,10 @@ provider "aws" {
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name            = var.project
-  cidr            = var.cidr
-  azs             = var.azs
-  private_subnets = var.private_subnets
-  public_subnets  = var.public_subnets
+  name           = var.project
+  cidr           = var.cidr
+  azs            = var.azs
+  public_subnets = var.public_subnets
 
   tags = {
     Owner       = var.project
