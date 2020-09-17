@@ -25,7 +25,7 @@ module "vpc" {
 
   tags = {
     Owner       = var.project
-    Environment = var.env[terraform.workspace]
+    Environment = var.env
   }
   vpc_tags = {
     Name = var.project
