@@ -15,10 +15,6 @@ provider "aws" {
   region = var.region
 }
 
-locals {
-  workspace = trimprefix(var.TFC_WORKSPACE_NAME, "dainfra-")
-}
-
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
@@ -29,7 +25,7 @@ module "vpc" {
 
   tags = {
     Owner       = var.project
-    Environment = var.env[local.workspace]
+    Environment = var.env[var.TFC_WORKSPACE_NAME]
   }
   vpc_tags = {
     Name = var.project
