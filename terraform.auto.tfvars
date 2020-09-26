@@ -12,7 +12,7 @@ public_subnets = [
   "172.16.3.0/24",
 ]
 env = {
-    "dainfra-dev" = "dev"
-    "dainfra-stg" = "stg"
-    "dainfra-prod" = "prod"
+  "dainfra-dev"  = "dev"
+  "dainfra-stg"  = "stg"
+  "dainfra-prod" = "prod"
 }
