@@ -4,6 +4,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "elyk"
 
+    # add comment
     workspaces {
       prefix = "dainfra-"
     }
