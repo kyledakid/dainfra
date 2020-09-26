@@ -14,5 +14,5 @@ public_subnets = [
 env = {
   "dev"  = "dev"
   "stg"  = "stg"
-  "prod" = "prod"
+  "prod" = "prd"
 }
