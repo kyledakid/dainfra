@@ -26,7 +26,6 @@ variable "cidr" {
 }
 
 variable "TFC_WORKSPACE_NAME" {
-  type    = string
-  default = ""
+  type = string
 }
 
