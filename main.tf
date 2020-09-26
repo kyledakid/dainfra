@@ -1,10 +1,12 @@
 terraform {
   required_version = ">= 0.13.0"
-  hostname         = "app.terraform.io"
-  organization     = "elyk"
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "elyk"
 
-  workspaces {
-    prefix = "dainfra-"
+    workspaces {
+      prefix = "dainfra-"
+    }
   }
 }
 
