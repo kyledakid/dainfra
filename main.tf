@@ -24,7 +24,8 @@ module "vpc" {
   public_subnets = var.public_subnets
 
   tags = {
-    Owner       = var.project
+    Owner = var.project
+    # Get ENV VAR
     Environment = var.env[var.TFC_WORKSPACE_NAME]
   }
   vpc_tags = {
