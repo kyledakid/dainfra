@@ -25,9 +25,9 @@ module "vpc" {
 
   tags = {
     Owner       = var.project
-    Environment = var.env[env.TFC_WORKSPACE_NAME]
+    Environment = var.env[var.TFC_WORKSPACE_NAME]
   }
   vpc_tags = {
-    Name = env.TFC_WORKSPACE_NAME
+    Name = var.TFC_WORKSPACE_NAME
   }
 }
