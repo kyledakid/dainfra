@@ -26,7 +26,8 @@ module "vpc" {
   tags = {
     Owner = var.project
     # Get ENV VAR
-    Environment = var.env[var.TFC_WORKSPACE_NAME]
+    Environment  = var.env[var.TFC_WORKSPACE_NAME]
+    "Managed by" = "Terraform"
   }
   vpc_tags = {
     Name = var.TFC_WORKSPACE_NAME
