@@ -11,4 +11,8 @@ public_subnets = [
   "172.16.2.0/24",
   "172.16.3.0/24",
 ]
-env = "dainfra-dev"
+env = {
+  "dev"  = "dev"
+  "stg"  = "stg"
+  "prod" = "prod"
+}

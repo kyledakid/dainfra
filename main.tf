@@ -1,9 +1,21 @@
 terraform {
   required_version = ">= 0.13.0"
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "elyk"
+
+    workspaces {
+      prefix = "dainfra-"
+    }
+  }
 }
 
 provider "aws" {
   region = var.region
+}
+
+locals {
+  workspace = trimprefix(var.TFC_WORKSPACE_NAME, "dainfra-")
 }
 
 module "vpc" {
@@ -16,7 +28,7 @@ module "vpc" {
 
   tags = {
     Owner       = var.project
-    Environment = var.env
+    Environment = var.env[local.workspace]
   }
   vpc_tags = {
     Name = var.project
